@@ -27,7 +27,7 @@ type TStateObject<Keys extends string, TContext> = {
   };
 };
 
-class MachineConfiguration<
+export class MachineConfiguration<
   TContext extends Record<string, any>,
   TStatesDeclaration extends string,
   TStatesImplementation extends Record<TStatesDeclaration, TStateObject<TStatesDeclaration, TContext>>
@@ -257,5 +257,3 @@ class MachineInstance<
     };
   }
 }
-
-export default { MachineConfiguration, MachineInstance };
