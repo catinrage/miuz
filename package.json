@@ -1,18 +1,38 @@
 {
   "name": "muz",
+  "version": "1.0.0",
+  "description": "A TypeScript state machine library with type safety for defining and managing state transitions with entry, exit, and event actions.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "index.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "state",
+    "machine"
+  ],
   "scripts": {
-    "start": "bun index.ts"
+    "build": "bun run build.mjs",
+    "lint": "eslint --ext .ts .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/eslint": "^8.56.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
+    "bun-plugin-dts": "^0.2.1",
     "prettier": "^3.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/catinrage/muz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catinrage/muz.git"
   }
 }
