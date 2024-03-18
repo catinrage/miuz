@@ -76,7 +76,7 @@ The `StateMachine` class represents an instance of the state machine. It provide
 Here's a simple example to demonstrate the usage of the library:
 
 ```typescript
-import { MachineConfiguration } from 'typescript-state-machine';
+import { MachineConfiguration } from 'muz';
 
 // Define your state machine configuration
 const config = new MachineConfiguration({
