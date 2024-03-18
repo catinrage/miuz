@@ -1,11 +1,15 @@
 {
-  "name": "muz",
+  "name": "miuz",
   "version": "1.0.0",
   "description": "A TypeScript state machine library with type safety for defining and managing state transitions with entry, exit, and event actions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "index.ts",
   "type": "module",
+  "author": {
+    "name": "catinrage",
+    "email": "catinrage@gmail.com"
+  },
   "files": [
     "dist"
   ],

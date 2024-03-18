@@ -17,11 +17,11 @@ This TypeScript state machine library provides a robust framework for defining a
 You can install the package via npm:
 
 ```bash
-npm install muz
+npm install miuz
 # or
-yarn add muz
+yarn add miuz
 # or
-bun add muz
+bun add miuz
 # ...
 ```
 
@@ -76,7 +76,7 @@ The `StateMachine` class represents an instance of the state machine. It provide
 Here's a simple example to demonstrate the usage of the library:
 
 ```typescript
-import { MachineConfiguration } from 'muz';
+import { MachineConfiguration } from 'miuz';
 
 // Define your state machine configuration
 const config = new MachineConfiguration({
