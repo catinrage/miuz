@@ -1,6 +1,6 @@
 {
   "name": "miuz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript state machine library with type safety for defining and managing state transitions with entry, exit, and event actions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
     "typescript": "^5.0.0"
   },
   "license": "MIT",
-  "homepage": "https://github.com/catinrage/muz",
+  "homepage": "https://github.com/catinrage/muz#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/catinrage/muz.git"
