@@ -1,6 +1,6 @@
 {
   "name": "miuz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A TypeScript state machine library with type safety for defining and managing state transitions with entry, exit, and event actions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
