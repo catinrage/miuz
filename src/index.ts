@@ -223,7 +223,7 @@ class MachineInstance<
       const eventAction = eventObject.action;
 
       // if event has an action, execute it
-      eventAction && this.executeAction(eventAction, data);
+      eventAction && this.executeAction(eventAction, ...data);
       // if event has a target, change the state
       eventTarget && this.setState(eventTarget);
     };
@@ -257,3 +257,57 @@ class MachineInstance<
     };
   }
 }
+
+// Define your state machine configuration
+const config = new MachineConfiguration({
+  declare: ['reading', 'editing'],
+  states: {
+    reading: {
+      on: {
+        edit: {
+          target: 'editing',
+          action(context, data) {}
+        }
+      }
+    },
+    editing: {
+      on: {
+        cancel: {
+          target: 'reading'
+        },
+        save: {
+          target: 'reading',
+          action: (context) => {
+            context.committedValue = context.value;
+          }
+        },
+        edit: {
+          action: (context, data: string) => {
+            context.value = data;
+          }
+        }
+      }
+    }
+  },
+  initial: 'reading',
+  context: {
+    committedValue: '',
+    value: ''
+  }
+});
+
+// Create an instance of the state machine and start it
+const instance = config.create().start();
+
+// Subscribe to state changes
+instance.subscribe(({ state, context }, type) => {
+  if (type === 'Context-Change') return;
+  console.log(context);
+});
+
+// Send events to trigger state transitions
+instance.send<'reading'>()('edit');
+instance.send<'editing'>()('edit', 'A');
+instance.send<'editing'>()('save');
+
+// TODO: add stop
